@@ -1,24 +1,31 @@
-let pomme = document.getElementById("index-pomme");
-pomme = "Elle est belle ma pomme !";
+let pomme = "Elle est belle ma pomme !";
 
-if(pomme.startsWith("Elle")){
-    console.log("Elle est belle ma pomme !commence par Elle");
+console.log(pomme.lastIndexOf('m'));
+
+let pIndexPomme = document.getElementById("index-pomme");
+pIndexPomme.innerHTML = pomme.indexOf("pomme");
+
+let pLastIndex = document.getElementById("last-index-m");
+pLastIndex.innerHTML = pomme.lastIndexOf("m");
+
+if (pomme.startsWith("Elle")) {
+    console.log(pomme + " Commence par 'Elle'");
 }
 
-if(pomme.endsWith("!")){
-    console.log("Elle est belle ma pomme !fini par !");
+if (pomme.endsWith("!")) {
+    console.log(pomme + " se termine par '!'");
 }
 
-
-// Avec substring, récupérez le mot 'pomme' et affichez le dans le paragraphe ayant #pomme pour ID.
-let pomme2 = document.getElementById("pomme");
-pomme2.innerHTML = pomme.substring(18);
+let pPomme = document.getElementById("pomme");
+pPomme.innerHTML = pomme.substring(18, 23);
 
 //Utilisez la méthode qui va bien pour transformer votre chaîne de caractères en tableau
 // Créez ensuite une boucle et affichez chaque caractère sur une ligne dans le paragraphe #one-line
 // Si vous en avez besoin, vous pouvez utiliser les br !
 
-for( let i = 0; i <pomme.length; + i++){
-    console.log(pomme[i]);
+let pOneLine = document.getElementById("one-line");
+
+for (x = 0; x < pomme.length; x++) {
+    pOneLine.innerHTML += pomme[x] + "<br/>";
 }
-console.log(pomme.lastIndexOf('m'));
+
